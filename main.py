@@ -231,45 +231,45 @@ class Mygame:
     def make_heart(self):
         if self.lives==1:
             x=randint(0, 640-self.heart.get_width())
-            y=randint(-1500, -450-self.heart.get_height())
+            y=randint(-2000, -1000-self.heart.get_height())
             self.hearts.append([x, y])
             self.heartS.play()
 
             x=randint(0, 640-self.heart2.get_width())
-            y=randint(-1500, -450-self.heart2.get_height())
+            y=randint(-2000, -1000-self.heart2.get_height())
             self.heart2s.append([x, y])
             self.heartS.play()
             x=randint(0, 640-self.heart2.get_width())
-            y=randint(-1500, -450-self.heart2.get_height())
+            y=randint(-2000, -1000-self.heart2.get_height())
             self.heart2s.append([x, y])
             self.heartS.play()
             x=randint(0, 640-self.heart2.get_width())
-            y=randint(-1500, -450-self.heart2.get_height())
+            y=randint(-2000, -1000-self.heart2.get_height())
             self.heart2s.append([x, y])
             x=randint(0, 640-self.heart2.get_width())
-            y=randint(-1500, -450-self.heart2.get_height())
+            y=randint(-2000, -1000-self.heart2.get_height())
             self.heart2s.append([x, y])
 
 
         elif choice([1,2,3,4,5])==1:
             x=randint(0, 640-self.heart.get_width())
-            y=randint(-1500, -450-self.heart.get_height())
+            y=randint(-2000, -1000-self.heart.get_height())
             self.hearts.append([x, y])
             self.heartS.play()
 
             x=randint(0, 640-self.heart2.get_width())
-            y=randint(-1500, -450-self.heart2.get_height())
+            y=randint(-2000, -1000-self.heart2.get_height())
             self.heart2s.append([x, y])
             self.heartS.play()
             x=randint(0, 640-self.heart2.get_width())
-            y=randint(-1500, -450-self.heart2.get_height())
+            y=randint(-2000, -1000-self.heart2.get_height())
             self.heart2s.append([x, y])
             self.heartS.play()
             x=randint(0, 640-self.heart2.get_width())
-            y=randint(-1500, -450-self.heart2.get_height())
+            y=randint(-2000, -1000-self.heart2.get_height())
             self.heart2s.append([x, y])
             x=randint(0, 640-self.heart2.get_width())
-            y=randint(-1500, -450-self.heart2.get_height())
+            y=randint(-2000, -1000-self.heart2.get_height())
             self.heart2s.append([x, y])
 
     def move_bomb(self):
@@ -286,13 +286,13 @@ class Mygame:
     
     def move_heart(self):
         for heart in self.hearts:
-            heart[1]+=10+self.round/20
+            heart[1]+=11+self.round/25
             if heart[1]>=480:
                 self.hearts.remove(heart)
         
     def move_heart2(self):
         for heart in self.heart2s:
-            heart[1]+=10+self.round/20
+            heart[1]+=11+self.round/25
             if heart[1]>=480:
                 self.heart2s.remove(heart)
 
@@ -332,12 +332,14 @@ class Mygame:
         for heart in self.hearts[:]:
             if abs(self.robot_x-heart[0])<40 and abs(self.robot_y-heart[1])<55:
                 self.hearts.remove(heart)
-                self.lives+=1
+                if self.lives<5:
+                    self.lives+=1
                 self.heartS.play()
             elif self.use_player2==True:
                 if abs(self.robot2_x-heart[0])<40 and abs(self.robot2_y-heart[1])<55:
                     self.hearts.remove(heart)
-                    self.lives+=1
+                    if self.lives<5:
+                        self.lives+=1
                     self.heartS.play()
 
     def gain_heart2(self):
@@ -528,7 +530,7 @@ class Mygame:
             "- The speed of the robot and monster will increase each round gradually.",
             "- Bombs may fall in each round. (you can hear explosion sound when created)",
             "- You have 5 lives.",
-            "- A red heart might fall and you can gain one life.",
+            "- A red heart might fall and you can gain one life if you have less than 5 lives. ",
             "- A black heart might fall too and it add one monster.",
             " (it disappers if you collection black heart again)",
             "- Lose a life if hit by the monster, bombs or miss coins.",
@@ -611,11 +613,11 @@ class Mygame:
         if self.lives==1:
             score_font=pygame.font.SysFont("Impact", 60)
             score_text=score_font.render(f"Final Score: {self.points}", True, (255, 255, 255))
-            self.display.blit(score_text, (160, 230))
+            self.display.blit(score_text, (130, 230))
         else:
             score_font=pygame.font.SysFont("Impact", 65)
             score_text=score_font.render(f"Current Score: {self.points}", True, (255, 255, 255))
-            self.display.blit(score_text, (110, 170))
+            self.display.blit(score_text, (80, 170))
 
         if self.lives<=1:
             instr_font=pygame.font.SysFont("Times New Roman", 33)
