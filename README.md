@@ -19,7 +19,7 @@ Players start with five lives, and they can gain extra lives by collecting red h
 
 As the game progresses, the speed of robots, bombs, monsters, and hearts gradually increases. The game includes many gimmicks, so it helps train explosive power (quick reaction and prediction skills).
 
-When a red heart falls, black hearts fall at the same time. Collecting a black heart spawns an additional monster. There are also small bombs and large bombs.
+When a red heart falls, black hearts fall at the same time. Collecting a black heart spawns an additional monster. (The additional monster will disappear if you collect a black heart again.) There are also small bombs and large bombs.
 
 Players should use sound cues to predict upcoming dangers. Different sounds indicate whether hearts or bombs are falling, and the volume of explosion sound changes depending on the number and size of bombs.
 
