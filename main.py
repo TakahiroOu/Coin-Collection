@@ -274,13 +274,13 @@ class Mygame:
 
     def move_bomb(self):
         for bomb in self.bombs:
-            bomb[1]+=4.5+self.round/20
+            bomb[1]+=4.5+self.round/26
             if bomb[1]>=480:
                 self.bombs.remove(bomb)
     
     def move_bomb2(self):
         for bomb in self.bomb2s:
-            bomb[1]+=5+self.round/12
+            bomb[1]+=5+self.round/18
             if bomb[1]>=480:
                 self.bomb2s.remove(bomb)
     
