@@ -1,4 +1,17 @@
-# Coin-Collection
+# How to Begin the Game
+
+1. Install Python (3.9 or later)
+2. Install pygame:
+   pip install pygame
+3. Download or clone this repository:
+   git clone https://github.com/TakahiroOu/Coin-Collection.git
+4. Move into the folder:
+   cd Coin-Collection
+5. Run the game:
+   python main.py
+
+## Description of the Coin-Collection game
+
 This is an original game that can be played by one or two players.
 In the game, players collect as many coins as possible. Coins fall from the sky, and the number of coins increases each round. Players must also avoid monsters and bombs.
 
