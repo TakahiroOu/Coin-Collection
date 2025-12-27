@@ -13,7 +13,7 @@
 ## Description of the Coin-Collection game
 
 This is an original game that can be played by one or two players.
-In the game, players collect as many coins as possible. Coins fall from the sky, and the number of coins increases each round. Players must also avoid monsters and bombs.
+In this game, players collect as many coins as possible. Coins fall from the sky, and the number of coins increases each round. Players must also avoid monsters and bombs.
 
 Players start with five lives, and they can gain extra lives by collecting red hearts. (Only when their current lives are blow five.)
 
