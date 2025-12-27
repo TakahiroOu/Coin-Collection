@@ -23,6 +23,6 @@ When a red heart falls, black hearts fall at the same time. Collecting a black h
 
 Players should use sound cues to predict upcoming dangers. Different sounds indicate whether hearts or bombs are falling, and the volume of explosion sound changes depending on the number and size of bombs.
 
-Monsters and bombs can cancel coins, so players should collect coins before they disappear to achieve a high score.
+Monsters and bombs will cancel coins, so players should collect coins before they disappear to achieve a high score.
 
 If you can score over 1500 points, you have excellent explosive power.
